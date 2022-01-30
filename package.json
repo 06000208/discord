@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "discord.js framework",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc --template \"./node_modules/boxy-jsdoc-template\" --configure .jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "type": "module",
   "engines": {
     "node": ">=16.9.0"
+  },
+  "devDependencies": {
+    "boxy-jsdoc-template": "^2.0.2"
   }
 }
