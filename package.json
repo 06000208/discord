@@ -1,0 +1,23 @@
+{
+  "name": "@a06000208/discord-framework",
+  "version": "0.0.1",
+  "description": "discord.js framework",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/06000208/discord.git"
+  },
+  "author": "06000208",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/06000208/discord/issues"
+  },
+  "homepage": "https://github.com/06000208/discord#readme",
+  "exports": "./index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}
