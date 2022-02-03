@@ -34,7 +34,4 @@ Thumbs.db
 .idea
 
 # project
-*.log*
-*.env
-*.env.test
-docs/
+docs/site/
