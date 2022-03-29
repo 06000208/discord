@@ -1,7 +1,9 @@
 {
+  "root": true,
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2021
+    "ecmaVersion": 2021,
+    "sourceType": "module"
   },
   "env": {
     "es2021": true,
