@@ -7,7 +7,3 @@ Opinionated discord.js framework
 - Utilizes [06000208/commands](https://github.com/06000208/commands/) for commands
 
 This is a work in progress, indicated by using major version 0.
-
-## Useful Projects
-
-- 
