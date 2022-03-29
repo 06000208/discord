@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "discord.js framework",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .js,.mjs",
-    "fix": "eslint . --ext .js,.mjs --fix",
-    "docs": "jsdoc --template \"./node_modules/boxy-jsdoc-template\" --configure .jsdoc.conf.json"
+    "test": "echo \"Error: no tests\" && exit 1",
+    "lint": "eslint . --ext .js,.mjs,.cjs",
+    "fix": "eslint . --ext .js,.mjs,.cjs --fix",
+    "dev": "node esbuild.config.js",
+    "build": "node esbuild.config.js --production",
+    "docs": "jsdoc --template \"./node_modules/boxy-jsdoc-template\" --configure .jsdoc.conf.json",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,12 +21,30 @@
     "url": "https://github.com/06000208/discord/issues"
   },
   "homepage": "https://github.com/06000208/discord#readme",
-  "exports": "./index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./src/index.js",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./dist/index.cjs"
+  },
   "type": "module",
+  "sideEffects": false,
   "engines": {
     "node": ">=16.9.0"
   },
+  "dependencies": {
+    "@a06000208/handler": "github:06000208/handler",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.27.1",
+    "discord.js": "^13.6.0"
+  },
   "devDependencies": {
-    "boxy-jsdoc-template": "^2.0.2"
+    "boxy-jsdoc-template": "^2.0.2",
+    "esbuild": "^0.14.28",
+    "eslint": "^8.12.0"
   }
 }
