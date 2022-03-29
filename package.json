@@ -1,7 +1,7 @@
 {
   "name": "@a06000208/discord-framework",
   "version": "0.0.1",
-  "description": "discord.js framework",
+  "description": "Opinionated discord.js framework",
   "scripts": {
     "test": "echo \"Error: no tests\" && exit 1",
     "lint": "eslint . --ext .js,.mjs,.cjs",
