@@ -9,6 +9,7 @@
     "dev": "node esbuild.config.js",
     "build": "node esbuild.config.js --production",
     "docs": "jsdoc --template \"./node_modules/boxy-jsdoc-template\" --configure .jsdoc.conf.json",
+    "refresh-handler": "npm uninstall @a06000208/handler && npm install github:06000208/handler",
     "prepare": "npm run build"
   },
   "repository": {
@@ -25,7 +26,7 @@
     "dist",
     "src"
   ],
-  "main": "./dist/index.cjs",
+  "main": "./src/index.js",
   "module": "./src/index.js",
   "exports": {
     "import": "./src/index.js",
