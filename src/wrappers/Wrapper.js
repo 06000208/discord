@@ -1,4 +1,5 @@
 /**
+ * Provides additional utility or features for something
  * @abstract
  */
 class Wrapper {
