@@ -30,7 +30,7 @@ class DiscordClient {
         /**
          * @type {EventEmitterConstruct}
          */
-        this.events = new EventEmitterConstruct(options.eventOptions || {}, this.client);
+        this.events = new EventEmitterConstruct(options.eventOptions || null, this.client);
     }
 
     /**
