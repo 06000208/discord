@@ -23,14 +23,9 @@ class DiscordClient {
         const options = input instanceof Client ? { client: input } : input || {};
 
         /**
-         * @type {ClientOptions}
+         * @type {?Client}
          */
-        this.clientOptions = options.clientOptions || {};
-
-        /**
-         * @type {Client}
-         */
-        this.client = options.client || new Client(this.clientOptions);
+        this.client = (options.client instanceof Client && options.client) || new Client(options.clientOptions || {});
 
         /**
          * @type {EventEmitterConstruct}
