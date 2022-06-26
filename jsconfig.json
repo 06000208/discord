@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "moduleResolution": "node",
+        "module": "ES2020",
     },
     "include": ["src"],
-    "exclude": ["node_modules", "docs", "dist"]
 }
