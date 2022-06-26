@@ -25,12 +25,12 @@ class DiscordClient {
         /**
          * @type {?Client}
          */
-        this.client = (options.client instanceof Client && options.client) || new Client(options.clientOptions || {});
+        this.client = options.client || new Client(options.clientOptions || {});
 
         /**
          * @type {EventEmitterConstruct}
          */
-        this.events = new EventEmitterConstruct(options.eventOptions, this.client);
+        this.events = new EventEmitterConstruct(options.eventOptions || {}, this.client);
     }
 
     /**
