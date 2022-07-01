@@ -14,7 +14,7 @@ import { TokenRegex } from "@sapphire/discord-utilities";
 /**
  * Wrapper for the discord.js Client class
  */
-class DiscordClient {
+class Discord {
     /**
      * @param {?Client|DiscordClientOptions} [input] Either an options object
      * for the wrapper, or a pre-existing Client instance to wrap.
@@ -53,5 +53,5 @@ class DiscordClient {
     }
 }
 
-export { DiscordClient };
+export { Discord };
 

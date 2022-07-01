@@ -1,1 +1,1 @@
-export * from "./structures/DiscordClient.js";
+export * from "./structures/Discord.js";
