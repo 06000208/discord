@@ -39,7 +39,8 @@ class Discord {
      * @return {Promise<string>}
      */
     async login(token) {
-        if (!token || typeof token !== "string") throw new Error("TOKEN_INVALID");
+        if (!token) throw new Error("TOKEN_MISSING");
+        if (typeof token != "string") throw new Error("TOKEN_INVALID");
         if (!TokenRegex.exec(token).groups.basicToken) throw new Error("TOKEN_INVALID_REGEX");
         return await this.client.login(token);
     }
