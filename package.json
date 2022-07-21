@@ -28,7 +28,7 @@
     "dist",
     "src"
   ],
-  "main": "./src/index.js",
+  "main": "./dist/index.cjs",
   "module": "./src/index.js",
   "exports": {
     "import": "./src/index.js",
