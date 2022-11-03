@@ -5,4 +5,7 @@
         "module": "ES2020",
     },
     "include": ["src"],
+    "typeAcquisition": {
+        "enable": true
+    },
 }
