@@ -1,6 +1,8 @@
 /* eslint-disable no-empty-function */
-import { EventEmitterConstruct } from "@a06000208/handler";
-import { Client } from "discord.js";
+// eslint-disable-next-line no-unused-vars
+import { EventEmitterConstruct, EmitterConstructData } from "@a06000208/handler";
+// eslint-disable-next-line no-unused-vars
+import { Client, ClientOptions } from "discord.js";
 import { TokenRegex } from "@sapphire/discord-utilities";
 import EventEmitter from "node:events";
 
@@ -8,11 +10,11 @@ import EventEmitter from "node:events";
  * @typedef {Object} DiscordBotOptions
  * @property {ClientOptions} [clientOptions] Options for
  * the discord.js client, unused when a pre-existing client is wrapped.
- * @property {EventEmitterData} [botEventOptions] Options for the bot's
+ * @property {EmitterConstructData} [botEventOptions] Options for the bot's
  * event emitter construct
- * @property {EventEmitterData} [clientEventOptions] Options for the client's
+ * @property {EmitterConstructData} [clientEventOptions] Options for the client's
  * event emitter construct
- * @property {EventEmitterData} [restEventOptions] Options for the REST
+ * @property {EmitterConstructData} [restEventOptions] Options for the REST
  * manager's event emitter construct
  * @property {?Client} [client] A pre-existing Client instance to wrap
  */
@@ -31,6 +33,10 @@ export class DiscordBot extends EventEmitter {
      */
     constructor(input) {
         super();
+
+        /**
+         * @type {DiscordBotOptions}
+         */
         this.options = input ? (input instanceof Client ? {} : input) : {};
 
         /**
@@ -46,7 +52,7 @@ export class DiscordBot extends EventEmitter {
      */
     get events() {
         Object.defineProperty(this, "events", {
-            value: new EventEmitterConstruct(this.options.eventOptions || null, this),
+            value: new EventEmitterConstruct(this.options.botEventOptions || null, this),
             enumerable: true,
         });
         return this.events;
@@ -59,7 +65,7 @@ export class DiscordBot extends EventEmitter {
      */
     get clientEvents() {
         Object.defineProperty(this, "clientEvents", {
-            value: new EventEmitterConstruct(this.options.eventOptions || null, this.client),
+            value: new EventEmitterConstruct(this.options.clientEventOptions || null, this.client),
             enumerable: true,
         });
         return this.clientEvents;
