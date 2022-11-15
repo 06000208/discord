@@ -1,8 +1,6 @@
 /* eslint-disable no-empty-function */
-// eslint-disable-next-line no-unused-vars
-import { EventEmitterConstruct, EmitterConstructData } from "@a06000208/handler";
-// eslint-disable-next-line no-unused-vars
-import { Client, ClientOptions } from "discord.js";
+import { EventEmitterConstruct } from "@a06000208/handler";
+import { Client } from "discord.js";
 import { TokenRegex } from "@sapphire/discord-utilities";
 import EventEmitter from "node:events";
 
