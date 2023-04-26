@@ -8,11 +8,11 @@ import EventEmitter from "node:events";
  * @typedef {Object} DiscordBotOptions
  * @property {ClientOptions} [clientOptions] Options for
  * the discord.js client, unused when a pre-existing client is wrapped.
- * @property {EmitterConstructData} [botEventOptions] Options for the bot's
+ * @property {EventEmitterConstructOptions} [botEventOptions] Options for the bot's
  * event emitter construct
- * @property {EmitterConstructData} [clientEventOptions] Options for the client's
+ * @property {EventEmitterConstructOptions} [clientEventOptions] Options for the client's
  * event emitter construct
- * @property {EmitterConstructData} [restEventOptions] Options for the REST
+ * @property {EventEmitterConstructOptions} [restEventOptions] Options for the REST
  * manager's event emitter construct
  * @property {?Client} [client] A pre-existing Client instance to wrap
  */
