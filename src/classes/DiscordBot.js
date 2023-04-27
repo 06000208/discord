@@ -50,7 +50,7 @@ export class DiscordBot extends EventEmitter {
      */
     get events() {
         Object.defineProperty(this, "events", {
-            value: new EventEmitterConstruct(this.options.botEventOptions || null, this),
+            value: new EventEmitterConstruct(this, this.options.botEventOptions || null),
             enumerable: true,
         });
         return this.events;
@@ -63,7 +63,7 @@ export class DiscordBot extends EventEmitter {
      */
     get clientEvents() {
         Object.defineProperty(this, "clientEvents", {
-            value: new EventEmitterConstruct(this.options.clientEventOptions || null, this.client),
+            value: new EventEmitterConstruct(this.client, this.options.clientEventOptions || null),
             enumerable: true,
         });
         return this.clientEvents;
@@ -76,7 +76,7 @@ export class DiscordBot extends EventEmitter {
      */
     get restEvents() {
         Object.defineProperty(this, "restEvents", {
-            value: new EventEmitterConstruct(this.options.restEventOptions || null, this.client.rest),
+            value: new EventEmitterConstruct(this.client.rest, this.options.restEventOptions || null),
             enumerable: true,
         });
         return this.restEvents;
